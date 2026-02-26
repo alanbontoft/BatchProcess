@@ -16,14 +16,16 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
     
-    <Grid Background="{DynamicResource PrimaryBackgroundBrush}" ColumnDefinitions="200,*">
+    <Grid Background="{DynamicResource PrimaryBackgroundBrush}" ColumnDefinitions="Auto,*">
         <Border Padding="20" >
             <Grid RowDefinitions="*,Auto">
                 <StackPanel>
-                    <Image Source="{SvgImage /Assets/decathlon.svg}"></Image>
+                    <Image Source="{SvgImage /Assets/decathlon-logo.svg}" Width="220" />
+                    <Button Content="Home" />
+                    <Button Content="Home" />
                 </StackPanel>
                 
-                
+                <Button Grid.Row="1" Content="Settings" />
             </Grid>
         </Border>
     </Grid>
