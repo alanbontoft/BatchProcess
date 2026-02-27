@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ba769f6e-7beb-41d4-a2f2-735b419aab0e" name="RPi 5">
+        <fileTransfer rootFolder="/home/pi/target/BatchProcess" accessType="SFTP" host="192.168.68.199" port="22" sshConfigId="756bd04a-b103-4c98-a50f-883ed9aaac3e" sshConfig="pi@192.168.68.199:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
