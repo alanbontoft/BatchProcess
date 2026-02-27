@@ -21,6 +21,7 @@
             <Grid RowDefinitions="*,Auto">
                 <StackPanel>
                     <Image Source="{SvgImage /Assets/decathlon-logo.svg}" Width="220" />
+                    <!--<Image Source="{SvgImage /Assets/water_pump.svg}" Width="220" />-->
                     <Button Content="Home" />
                     <Button Content="Home" />
                 </StackPanel>
