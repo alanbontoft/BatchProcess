@@ -3,12 +3,13 @@
         xmlns:vm="using:BatchProcess.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
+        Width="1024" Height="600"
         x:Class="BatchProcess.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="BatchProcess"
-        Width="640" Height="480" WindowStartupLocation="CenterScreen" >
+        WindowStartupLocation="CenterScreen" >
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -17,17 +18,20 @@
     </Design.DataContext>
     
     <Grid Background="{DynamicResource PrimaryBackgroundBrush}" ColumnDefinitions="Auto,*">
-        <Border Padding="20" >
+        <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" >
             <Grid RowDefinitions="*,Auto">
                 <StackPanel Spacing="10">
                     <Image Source="{SvgImage /Assets/decathlon-logo.svg}" Width="220" />
                     <!--<Image Source="{SvgImage /Assets/water_pump.svg}" Width="220" />-->
-                    <Button Content="Home"  Foreground="White"  Command="{Binding HomeCommand}"/>
-                    <Button Content="Away" Foreground="White"  />
-                    <TextBlock Text="{Binding Count}" Foreground="White" />
+                    <Button Content="Home"  Command="{Binding HomeCommand}" />
+                    <Button Content="Process"  Command="{Binding HomeCommand}" />
+                    <Button Content="Actions"  Command="{Binding HomeCommand}" />
+                    <Button Content="Macros"  Command="{Binding HomeCommand}" />
+                    <Button Content="Reporter"  Command="{Binding HomeCommand}" />
+                    <Button Content="History"  Command="{Binding HomeCommand}" />
                 </StackPanel>
                 
-                <Button Grid.Row="1" Content="Settings" />
+                <Button Grid.Row="1" Content="Settings"  Command="{Binding HomeCommand}" HorizontalAlignment="Left"/>
             </Grid>
         </Border>
     </Grid>

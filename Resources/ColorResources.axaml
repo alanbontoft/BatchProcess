@@ -3,4 +3,16 @@
     <!-- Add Resources Here -->
     <Color x:Key="PrimaryBackground">#14172D</Color>
     <SolidColorBrush x:Key="PrimaryBackgroundBrush" Color="{DynamicResource PrimaryBackground}" />
+    
+    <Color x:Key="PrimaryForeground">#CFCFCF</Color>
+    
+    <Color x:Key="PrimaryHoverForeground">#FFFFFF</Color>
+    <Color x:Key="PrimaryHoverBackground">#333B5A</Color>
+    
+    <Color x:Key="GradientStartColor">#111214</Color>
+    <Color x:Key="GradientStopColor">#151E3E</Color>
+    <LinearGradientBrush x:Key="PrimaryBackgroundGradient" StartPoint="0%, 0%" EndPoint="100%, 0%" >
+        <GradientStop  Offset="0" Color="{DynamicResource GradientStartColor}" />
+        <GradientStop  Offset="1" Color="{DynamicResource GradientStopColor}" />
+    </LinearGradientBrush>
 </ResourceDictionary>
