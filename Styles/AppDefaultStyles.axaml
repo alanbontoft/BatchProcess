@@ -3,7 +3,12 @@
     <Design.PreviewWith>
         <Border Padding="20" Width="200" Background="{DynamicResource PrimaryBackgroundGradient}">
             <!-- Add Controls for Previewer Here -->
-            <Button Content="Test" />
+            <Button >
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="&#xE2C2;" Classes="icon" FontFamily="{DynamicResource PhosphorFillFont}" />
+                    <Label Content="Home" />
+                </StackPanel>
+            </Button>
         </Border>
     </Design.PreviewWith>
 
@@ -13,10 +18,17 @@
         <Setter Property="Foreground" Value="{DynamicResource PrimaryForeground}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryBackground}" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="FontFamily" Value="{DynamicResource AkkoProRegularFont}"></Setter>
     </Style>
     
     <Style Selector="Button:pointerover /template/ ContentPresenter">
         <Setter Property="Foreground" Value="{DynamicResource PrimaryHoverForeground}" />
         <Setter Property="Background" Value="{DynamicResource PrimaryHoverBackground}" />
     </Style>
+    
+    <Style Selector="Label.icon">
+        <Setter Property="FontFamily" Value="{DynamicResource PhosphorFillFont}" />
+        <Setter Property="Margin" Value="0 0 5 0"></Setter>
+    </Style>
+    
 </Styles>

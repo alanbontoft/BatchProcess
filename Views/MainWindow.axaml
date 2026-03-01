@@ -7,7 +7,7 @@
         Width="1024" Height="600"
         x:Class="BatchProcess.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/Images/avalonia-logo.ico"
         Title="BatchProcess"
         WindowStartupLocation="CenterScreen" >
 
@@ -21,17 +21,50 @@
         <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" >
             <Grid RowDefinitions="*,Auto">
                 <StackPanel Spacing="10">
-                    <Image Source="{SvgImage /Assets/decathlon-logo.svg}" Width="220" />
+                    <Image Source="{SvgImage /Assets/Images/decathlon-logo.svg}" Width="220" />
                     <!--<Image Source="{SvgImage /Assets/water_pump.svg}" Width="220" />-->
-                    <Button Content="Home"  Command="{Binding HomeCommand}" />
-                    <Button Content="Process"  Command="{Binding HomeCommand}" />
-                    <Button Content="Actions"  Command="{Binding HomeCommand}" />
-                    <Button Content="Macros"  Command="{Binding HomeCommand}" />
-                    <Button Content="Reporter"  Command="{Binding HomeCommand}" />
-                    <Button Content="History"  Command="{Binding HomeCommand}" />
+                    <Button   Command="{Binding HomeCommand}" >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="&#xE2C2;" Classes="icon" />
+                            <Label Content="Home" />
+                        </StackPanel>
+                    </Button>
+                    <Button  Command="{Binding ProcessCommand}" >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="&#xE346;" Classes="icon" />
+                            <Label Content="Process" />
+                        </StackPanel>
+                    </Button>
+                    <Button Command="{Binding ActionsCommand}" >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="&#xE7F2;" Classes="icon"  />
+                            <Label Content="Actions" />
+                        </StackPanel>
+                    </Button>
+                    <Button Command="{Binding MacrosCommand}" >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="&#xE3EE;" Classes="icon" />
+                            <Label Content="Macros" />
+                        </StackPanel>
+                    </Button>
+                    <Button Command="{Binding ReporterCommand}" >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="&#xEB7A;" Classes="icon" />
+                            <Label Content="Reporter" />
+                        </StackPanel>
+                    </Button>
+                    <Button Command="{Binding HistoryCommand}" >
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="&#xE03A;" Classes="icon" />
+                            <Label Content="History" />
+                        </StackPanel>
+                    </Button>
                 </StackPanel>
                 
-                <Button Grid.Row="1" Content="Settings"  Command="{Binding HomeCommand}" HorizontalAlignment="Left"/>
+                <Button Grid.Row="1" Command="{Binding SettingsCommand}" HorizontalAlignment="Left" >
+                    <Label Content="&#xE272;" Classes="icon" Margin="0" />
+                </Button>
+                
             </Grid>
         </Border>
     </Grid>

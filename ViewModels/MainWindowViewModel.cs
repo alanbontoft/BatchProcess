@@ -19,4 +19,40 @@ public partial class MainWindowViewModel : ViewModelBase
         Debug.WriteLine("HOME");
         Count++;
     }
+    
+    [RelayCommand]
+    private void Process()
+    {
+        Debug.WriteLine("PROCESS");
+    }
+    
+    [RelayCommand]
+    private void Actions()
+    {
+        Debug.WriteLine("ACTIONS");
+    }
+    
+    [RelayCommand]
+    private void Macros()
+    {
+        Debug.WriteLine("MACROS");
+    }
+    
+    [RelayCommand]
+    private void Reporter()
+    {
+        Debug.WriteLine("REPORTER");
+    }
+    
+    [RelayCommand]
+    private void History()
+    {
+        Debug.WriteLine("HISTORY");
+    }
+    
+    [RelayCommand]
+    private void Settings()
+    {
+        Debug.WriteLine("SETTINGS");
+    }
 }
