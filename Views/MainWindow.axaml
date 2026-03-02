@@ -1,6 +1,7 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:vm="using:BatchProcess.ViewModels"
+        xmlns:vw="using:BatchProcess.Views"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="600"
@@ -18,42 +19,46 @@
     </Design.DataContext>
     
     <Grid Background="{DynamicResource PrimaryBackgroundBrush}" ColumnDefinitions="Auto,*">
+
+        <ContentControl Grid.Column="1" Content="{Binding CurrentPage}" />
+
+
         <Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" >
             <Grid RowDefinitions="*,Auto">
                 <StackPanel Spacing="10">
                     <Image Source="{SvgImage /Assets/Images/decathlon-logo.svg}" Width="220" />
                     <!--<Image Source="{SvgImage /Assets/water_pump.svg}" Width="220" />-->
-                    <Button   Command="{Binding HomeCommand}" >
+                    <Button Command="{Binding SelectPageCommand}" CommandParameter="HOME" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="&#xE2C2;" Classes="icon" />
                             <Label Content="Home" />
                         </StackPanel>
                     </Button>
-                    <Button  Command="{Binding ProcessCommand}" >
+                    <Button Command="{Binding SelectPageCommand}" CommandParameter="PROCESS" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="&#xE346;" Classes="icon" />
                             <Label Content="Process" />
                         </StackPanel>
                     </Button>
-                    <Button Command="{Binding ActionsCommand}" >
+                    <Button Command="{Binding SelectPageCommand}" CommandParameter="ACTIONS" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="&#xE7F2;" Classes="icon"  />
                             <Label Content="Actions" />
                         </StackPanel>
                     </Button>
-                    <Button Command="{Binding MacrosCommand}" >
+                    <Button Command="{Binding SelectPageCommand}" CommandParameter="MACROS" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="&#xE3EE;" Classes="icon" />
                             <Label Content="Macros" />
                         </StackPanel>
                     </Button>
-                    <Button Command="{Binding ReporterCommand}" >
+                    <Button Command="{Binding SelectPageCommand}" CommandParameter="REPORTER" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="&#xEB7A;" Classes="icon" />
                             <Label Content="Reporter" />
                         </StackPanel>
                     </Button>
-                    <Button Command="{Binding HistoryCommand}" >
+                    <Button Command="{Binding SelectPageCommand}" CommandParameter="HISTORY" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="&#xE03A;" Classes="icon" />
                             <Label Content="History" />
@@ -61,7 +66,7 @@
                     </Button>
                 </StackPanel>
                 
-                <Button Grid.Row="1" Command="{Binding SettingsCommand}" HorizontalAlignment="Left" >
+                <Button Grid.Row="1" Command="{Binding SelectPageCommand}" CommandParameter="SETTINGS" HorizontalAlignment="Left" >
                     <Label Content="&#xE272;" Classes="icon" Margin="0" />
                 </Button>
                 

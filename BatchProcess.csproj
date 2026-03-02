@@ -28,4 +28,19 @@
         <PackageReference Include="SkiaSharp" Version="3.116.1" />
         <PackageReference Include="SkiaSharp.NativeAssets.Linux" Version="3.116.1" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Views\SettingsPageView.axaml.cs">
+        <DependentUpon>SettingsPageView.axaml</DependentUpon>
+      </Compile>
+      <Compile Update="Views\HistoryPageView.axaml.cs">
+        <DependentUpon>HistoryPageView.axaml</DependentUpon>
+      </Compile>
+      <Compile Update="Views\ReporterPageView.axaml.cs">
+        <DependentUpon>ReporterPageView.axaml</DependentUpon>
+      </Compile>
+      <Compile Update="Views\ActionsPageView.axaml.cs">
+        <DependentUpon>ActionsPageView.axaml</DependentUpon>
+      </Compile>
+    </ItemGroup>
 </Project>
