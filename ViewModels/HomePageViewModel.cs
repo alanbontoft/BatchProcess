@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using BatchProcess.Models;
+using CommunityToolkit.Mvvm.ComponentModel;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,6 @@ public partial class HomePageViewModel : PageViewModelBase
 {
     public HomePageViewModel()
     {
-        Title = "Home Page";
+        PageName = ApplicationPageNames.HOME;
     } 
 }

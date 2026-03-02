@@ -11,7 +11,7 @@ public partial class MainWindowViewModel : ViewModelBase
     private int _count = 0;
 
     [ObservableProperty]
-    private ViewModelBase _currentPage;
+    private PageViewModelBase _currentPage;
 
     private readonly HomePageViewModel _homePage = new();
     private readonly ProcessPageViewModel _processPage = new();

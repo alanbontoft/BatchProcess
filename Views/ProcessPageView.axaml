@@ -12,6 +12,6 @@
     <vm:ProcessPageViewModel />    
 </Design.DataContext>
 
-  <Label Content="{Binding Title}" Foreground="{DynamicResource PrimaryForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <Label Content="{Binding PageName}" Foreground="{DynamicResource PrimaryForeground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
 </UserControl>

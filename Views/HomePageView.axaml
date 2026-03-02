@@ -13,6 +13,6 @@
         <vm:HomePageViewModel />    
     </Design.DataContext>
 
-  <Label Content="{Binding Title}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+  <Label Content="{Binding PageName}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
 </UserControl>
