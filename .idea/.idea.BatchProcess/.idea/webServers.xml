@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="ba769f6e-7beb-41d4-a2f2-735b419aab0e" name="RPi 5">
-        <fileTransfer rootFolder="/home/pi/target/BatchProcess" accessType="SFTP" host="192.168.68.199" port="22" sshConfigId="756bd04a-b103-4c98-a50f-883ed9aaac3e" sshConfig="pi@192.168.68.199:22 key" keyPair="true">
+        <fileTransfer rootFolder="/home/pi/target/BatchProcess" accessType="SFTP" host="172.31.7.26" port="22" sshConfigId="80f936da-9656-402a-86ec-c9746c76b4b1" sshConfig="pi@172.31.7.26:22 key" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
