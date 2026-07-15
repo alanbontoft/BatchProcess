@@ -13,6 +13,11 @@
         <vm:SettingsPageViewModel />    
     </Design.DataContext>
 
-  <Label Content="{Binding PageName}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+		<Label Content="{Binding PageName}" />
+		<Button Content="Exit" Command="{Binding ShutdownCommand}" />
+	</StackPanel>
+
+
 
 </UserControl>
