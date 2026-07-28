@@ -22,6 +22,11 @@ public partial class MainWindowViewModel : ViewModelBase
         CurrentPage = _pageFactory.GetPageViewModel(Models.ApplicationPageNames.HOME);
     }
 
+    // parameterless constructor to allow MainWindow preview
+    public MainWindowViewModel()
+    {
+    }
+
     [RelayCommand]
     private void SelectPage(object o)
     {
