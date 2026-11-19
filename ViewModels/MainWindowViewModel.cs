@@ -16,15 +16,19 @@ public partial class MainWindowViewModel : ViewModelBase
     [ObservableProperty]
     private PageViewModelBase _currentPage;
 
+    public Setup Setup { get; private set; }
+
     public MainWindowViewModel(PageFactory pageFactory)
     {
         _pageFactory = pageFactory;
         CurrentPage = _pageFactory.GetPageViewModel(Models.ApplicationPageNames.HOME);
+        Setup = new();
     }
 
     // parameterless constructor to allow MainWindow preview
     public MainWindowViewModel()
     {
+        
     }
 
     [RelayCommand]
@@ -50,6 +54,18 @@ public partial class MainWindowViewModel : ViewModelBase
             case "SETTINGS":
                 CurrentPage = getModel(Models.ApplicationPageNames.SETTINGS); break;
         }
+    }
+
+    [RelayCommand]
+    private void ImageDoubleTapped(object o)
+    {
+        Debug.WriteLine("Image double clicked");
+    }
+
+    [RelayCommand]
+    private void ImageTapped(object o)
+    {
+        Setup.Name += "!";
     }
 
     // simple lambda function to create ViewModels using the Page Factory

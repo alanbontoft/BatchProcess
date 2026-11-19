@@ -10,9 +10,10 @@
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/Images/avalonia-logo.ico"
         Title="BatchProcess"
-		WindowState="Maximized"
-		SystemDecorations="None"
-		Cursor="None">
+		
+		SystemDecorations="None">
+		<!--WindowState="Maximized"
+		Cursor="None">-->
 
 		<!-- Maximize window, remove title bar and mouse pointer -->
 
@@ -30,7 +31,21 @@
 		<Border Padding="20" Background="{DynamicResource PrimaryBackgroundGradient}" >
 			<Grid RowDefinitions="*,Auto">
 				<StackPanel Spacing="10">
-					<Image Source="{SvgImage /Assets/Images/decathlon-logo.svg}" Width="220" />
+					<Image Source="{SvgImage /Assets/Images/decathlon-logo.svg}" Width="220">
+				<!--		<Image.GestureRecognizers>
+							<TapGestureRecognizer
+								NumberOfTapsRequired="2"
+								Command="{Binding OpenImageCommand}" />
+						</Image.GestureRecognizers>-->
+						<Interaction.Behaviors>
+							<EventTriggerBehavior EventName="DoubleTapped">
+								<InvokeCommandAction Command="{Binding ImageDoubleTappedCommand}" />
+							</EventTriggerBehavior>
+							<EventTriggerBehavior EventName="Tapped">
+								<InvokeCommandAction Command="{Binding ImageTappedCommand}" />
+							</EventTriggerBehavior>
+						</Interaction.Behaviors>
+					</Image>
 					<!--<Image Source="{SvgImage /Assets/water_pump.svg}" Width="220" />-->
 					<Button Command="{Binding SelectPageCommand}" CommandParameter="HOME" >
 						<StackPanel Orientation="Horizontal">
@@ -68,6 +83,7 @@
 							<Label Content="History" />
 						</StackPanel>
 					</Button>
+					<Label Content="{Binding Setup.Name}" />
 				</StackPanel>
 
 				<Button Grid.Row="1" Command="{Binding SelectPageCommand}" CommandParameter="SETTINGS" HorizontalAlignment="Left" >
